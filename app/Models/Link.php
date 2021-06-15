@@ -14,7 +14,7 @@ class Link extends Model
      *
      * @var array
      */
-    protected $fillable = ['nama_website','url','status'];
+    protected $fillable = ['nama_website','url','jumlah','status'];
 
     /**
      * The table associated with the model.
