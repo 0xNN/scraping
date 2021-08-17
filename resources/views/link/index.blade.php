@@ -27,16 +27,16 @@ Dashboard
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="nama_website">Nama Website</label>
-                        <input type="text" id="nama_website" name="nama_website" class="form-control form-control-sm">
+                        <input type="text" id="nama_website" name="nama_website" class="form-control form-control-sm" required>
                     </div>
                     <div class="form-group">
                         <input type="hidden" name="id" id="id">
                         <label for="url">URL</label>
-                        <input type="text" name="url" id="url" class="form-control form-control-sm">
+                        <input type="text" name="url" id="url" class="form-control form-control-sm" required>
                     </div>
                     <div class="form-group">
                         <label for="jumlah">Jumlah List</label>
-                        <input type="number" name="jumlah" id="jumlah" class="form-control form-control-sm">
+                        <input type="number" name="jumlah" id="jumlah" class="form-control form-control-sm" required>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -50,9 +50,13 @@ Dashboard
 
 <div class="card">
     <div class="card-header card-primary">
+        @if($links == 3)
+         required
+        @else
         <a href="javascript:void(0)" class="btn btn-sm btn-primary shadow-sm" id="tombol-utama">
             <i class="fas fa-plus-square" ></i>
         </a>
+        @endif
     </div>
     <div class="card-body">
         <table class="table table-bordered dt-link">

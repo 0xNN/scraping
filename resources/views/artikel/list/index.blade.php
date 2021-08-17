@@ -31,7 +31,7 @@ Dashboard
           <span class="input-group-text" id="basic-addon3">{{ $link->url }}</span>
         </div>
         <input type="hidden" name="jumlah" id="jumlah" value="{{ $link->jumlah }}">
-        <input type="number" min="1" max="300" name="page" id="page" class="form-control form-control-sm">
+        <input type="number" min="1" max="300" name="page" id="page" class="form-control form-control-sm" required>
         <div class="input-group-append">
           <button type="submit" class="btn btn-sm btn-outline-success">Crawler Data</button>
         </div>

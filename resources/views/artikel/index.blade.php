@@ -21,8 +21,15 @@ Dashboard
       <!-- small box -->
       <div class="small-box bg-info">
         <div class="inner">
-          <h3></h3>
-
+          @if($item->id == 1)
+            <h3>{{ $total_lk21 }}</h3>
+          @endif
+          @if($item->id == 2)
+            <h3>{{ $total_apik }}</h3>
+          @endif
+          @if($item->id == 3)
+            <h3>{{ $total_duta }}</h3>
+          @endif
           <p>{{ $item->nama_website }}</p>
         </div>
         <div class="icon">

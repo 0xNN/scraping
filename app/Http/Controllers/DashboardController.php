@@ -17,7 +17,10 @@ class DashboardController extends Controller
         $active_film = Link::whereStatus('active')->first();
         $url = explode("/",$active_film->url);
         $sumber = $url[0]."//".$url[2];
-        return view('index', compact('lists','active_film','sumber'));
+
+        $enam_film = Artikel::where('link_id', $active_film->id)->take(6)->get();
+        // dd($enam_film);
+        return view('index', compact('lists','active_film','sumber', 'enam_film'));
     }
 
     public function detail($tahun, $id)
@@ -33,6 +36,6 @@ class DashboardController extends Controller
 
     public function about()
     {
-        return 'test';
+        return view('about.index');
     }
 }

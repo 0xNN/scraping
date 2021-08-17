@@ -140,16 +140,17 @@
       <!-- Section: Images -->
       <section class="">
         <div class="row">
+          @foreach($enam_film as $item)
           <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
             <div
               class="bg-image hover-overlay ripple shadow-1-strong rounded"
               data-ripple-color="light"
             >
               <img
-                src="https://mdbootstrap.com/img/new/fluid/city/113.jpg"
+                src="{{ $item->image_link }}"
                 class="w-100"
               />
-              <a href="#!">
+              <a href="{{ route('dashboard.detail', ['tahun' => $item->tahun, 'id' => $item->id]) }}">
                 <div
                   class="mask"
                   style="background-color: rgba(251, 251, 251, 0.2);"
@@ -157,91 +158,8 @@
               </a>
             </div>
           </div>
-          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-            <div
-              class="bg-image hover-overlay ripple shadow-1-strong rounded"
-              data-ripple-color="light"
-            >
-              <img
-                src="https://mdbootstrap.com/img/new/fluid/city/111.jpg"
-                class="w-100"
-              />
-              <a href="#!">
-                <div
-                  class="mask"
-                  style="background-color: rgba(251, 251, 251, 0.2);"
-                ></div>
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-            <div
-              class="bg-image hover-overlay ripple shadow-1-strong rounded"
-              data-ripple-color="light"
-            >
-              <img
-                src="https://mdbootstrap.com/img/new/fluid/city/112.jpg"
-                class="w-100"
-              />
-              <a href="#!">
-                <div
-                  class="mask"
-                  style="background-color: rgba(251, 251, 251, 0.2);"
-                ></div>
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-            <div
-              class="bg-image hover-overlay ripple shadow-1-strong rounded"
-              data-ripple-color="light"
-            >
-              <img
-                src="https://mdbootstrap.com/img/new/fluid/city/114.jpg"
-                class="w-100"
-              />
-              <a href="#!">
-                <div
-                  class="mask"
-                  style="background-color: rgba(251, 251, 251, 0.2);"
-                ></div>
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-            <div
-              class="bg-image hover-overlay ripple shadow-1-strong rounded"
-              data-ripple-color="light"
-            >
-              <img
-                src="https://mdbootstrap.com/img/new/fluid/city/115.jpg"
-                class="w-100"
-              />
-              <a href="#!">
-                <div
-                  class="mask"
-                  style="background-color: rgba(251, 251, 251, 0.2);"
-                ></div>
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-            <div
-              class="bg-image hover-overlay ripple shadow-1-strong rounded"
-              data-ripple-color="light"
-            >
-              <img
-                src="https://mdbootstrap.com/img/new/fluid/city/116.jpg"
-                class="w-100"
-              />
-              <a href="#!">
-                <div
-                  class="mask"
-                  style="background-color: rgba(251, 251, 251, 0.2);"
-                ></div>
-              </a>
-            </div>
-          </div>
+          @endforeach
+<!--  -->
         </div>
       </section>
       <!-- Section: Images -->

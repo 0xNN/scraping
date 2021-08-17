@@ -16,7 +16,8 @@ class LinkController extends Controller
      */
     public function index()
     {
-        return view('link.index');
+        $links = Link::count();
+        return view('link.index', compact('links'));
     }
 
     public function getLink(Request $request)

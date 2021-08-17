@@ -25,7 +25,10 @@ class ArtikelController extends Controller
     public function index(Request $request)
     {
         $links = Link::all();
-        return view('artikel.index', compact('links'));
+        $total_lk21 = Artikel::where('link_id',1)->count();
+        $total_apik= Artikel::where('link_id',2)->count();
+        $total_duta = Artikel::where('link_id',3)->count();
+        return view('artikel.index', compact('links','total_lk21','total_apik','total_duta'));
     }
 
     public function getArtikel(Request $request)
